@@ -4,8 +4,8 @@ ruby '2.2.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use postgres as the database for Active Record
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -27,8 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+# Use Puma as the app server
+gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -46,8 +46,33 @@ group :development do
   gem 'spring'
 end
 
+# Heroku fix
+group :production, :staging do
+  gem 'rails_12factor'
+  gem 'rack-timeout'
+end
+
+# file uploades & assets
+gem 'paperclip' # Image Rescaling for aws
+gem 'aws-sdk', '< 2.0'
+gem 'fog-aws'
+
+# caching
+gem 'dalli' # memcache
+gem 'rack-cache' # http caching
+gem 'kgio' # faster kgio IO system
+
+# rollbar
+gem 'rollbar'
+
+# newrelic
+gem 'newrelic_rpm'
+
+# sidekiq
+gem 'sidekiq'
+gem 'sinatra', require: nil
+
 # Spree gems
 gem 'spree', github: 'spree/spree', branch: '3-0-stable'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
-
