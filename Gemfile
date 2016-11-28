@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.2.4'
+ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5.1'
+gem 'rails', '5.0.0.1'
 # Use postgres as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -73,6 +73,6 @@ gem 'sidekiq'
 gem 'sinatra', require: nil
 
 # Spree gems
-gem 'spree', github: 'spark-solutions/spree', branch: '3-0-stable'
-gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
-gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
+gem 'spree', github: 'spark-solutions/spree'
+gem 'spree_gateway', github: 'spree/spree_gateway'
+gem 'spree_auth_devise', github: 'spree/spree_auth_devise'
