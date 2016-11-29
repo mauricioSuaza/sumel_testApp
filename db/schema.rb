@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129113334) do
+ActiveRecord::Schema.define(version: 20161129120496) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,22 +27,6 @@ ActiveRecord::Schema.define(version: 20161129113334) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
-  end
-
-  create_table "spree_activators", force: :cascade do |t|
-    t.string   "description"
-    t.datetime "expires_at"
-    t.datetime "starts_at"
-    t.string   "name"
-    t.string   "event_name"
-    t.string   "type"
-    t.integer  "usage_limit"
-    t.string   "match_policy", default: "all"
-    t.string   "code"
-    t.boolean  "advertise",    default: false
-    t.string   "path"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
   end
 
   create_table "spree_addresses", force: :cascade do |t|
@@ -67,10 +51,10 @@ ActiveRecord::Schema.define(version: 20161129113334) do
   end
 
   create_table "spree_adjustments", force: :cascade do |t|
-    t.integer  "source_id"
     t.string   "source_type"
-    t.integer  "adjustable_id"
+    t.integer  "source_id"
     t.string   "adjustable_type"
+    t.integer  "adjustable_id"
     t.decimal  "amount",          precision: 10, scale: 2
     t.string   "label"
     t.boolean  "mandatory"
@@ -87,8 +71,8 @@ ActiveRecord::Schema.define(version: 20161129113334) do
   end
 
   create_table "spree_assets", force: :cascade do |t|
-    t.integer  "viewable_id"
     t.string   "viewable_type"
+    t.integer  "viewable_id"
     t.integer  "attachment_width"
     t.integer  "attachment_height"
     t.integer  "attachment_file_size"
@@ -107,8 +91,8 @@ ActiveRecord::Schema.define(version: 20161129113334) do
 
   create_table "spree_calculators", force: :cascade do |t|
     t.string   "type"
-    t.integer  "calculable_id"
     t.string   "calculable_type"
+    t.integer  "calculable_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.text     "preferences"
@@ -116,14 +100,6 @@ ActiveRecord::Schema.define(version: 20161129113334) do
     t.index ["calculable_id", "calculable_type"], name: "index_spree_calculators_on_calculable_id_and_calculable_type", using: :btree
     t.index ["deleted_at"], name: "index_spree_calculators_on_deleted_at", using: :btree
     t.index ["id", "type"], name: "index_spree_calculators_on_id_and_type", using: :btree
-  end
-
-  create_table "spree_configurations", force: :cascade do |t|
-    t.string   "name"
-    t.string   "type",       limit: 50
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.index ["name", "type"], name: "index_spree_configurations_on_name_and_type", using: :btree
   end
 
   create_table "spree_countries", force: :cascade do |t|
@@ -216,19 +192,12 @@ ActiveRecord::Schema.define(version: 20161129113334) do
   end
 
   create_table "spree_log_entries", force: :cascade do |t|
-    t.integer  "source_id"
     t.string   "source_type"
+    t.integer  "source_id"
     t.text     "details"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["source_id", "source_type"], name: "index_spree_log_entries_on_source_id_and_source_type", using: :btree
-  end
-
-  create_table "spree_mail_methods", force: :cascade do |t|
-    t.string   "environment"
-    t.boolean  "active",      default: true
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
   end
 
   create_table "spree_option_type_prototypes", force: :cascade do |t|
@@ -351,8 +320,8 @@ ActiveRecord::Schema.define(version: 20161129113334) do
   create_table "spree_payments", force: :cascade do |t|
     t.decimal  "amount",               precision: 10, scale: 2, default: "0.0", null: false
     t.integer  "order_id"
-    t.integer  "source_id"
     t.string   "source_type"
+    t.integer  "source_id"
     t.integer  "payment_method_id"
     t.string   "state"
     t.string   "response_code"
@@ -800,8 +769,8 @@ ActiveRecord::Schema.define(version: 20161129113334) do
     t.string   "action"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
-    t.integer  "originator_id"
     t.string   "originator_type"
+    t.integer  "originator_id"
     t.index ["stock_item_id"], name: "index_spree_stock_movements_on_stock_item_id", using: :btree
   end
 
@@ -974,15 +943,6 @@ ActiveRecord::Schema.define(version: 20161129113334) do
     t.index ["taxonomy_id"], name: "index_taxons_on_taxonomy_id", using: :btree
   end
 
-  create_table "spree_tokenized_permissions", force: :cascade do |t|
-    t.string   "permissable_type"
-    t.integer  "permissable_id"
-    t.string   "token"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.index ["permissable_id", "permissable_type"], name: "index_tokenized_name_and_type", using: :btree
-  end
-
   create_table "spree_trackers", force: :cascade do |t|
     t.string   "analytics_id"
     t.boolean  "active",       default: true
@@ -1021,8 +981,10 @@ ActiveRecord::Schema.define(version: 20161129113334) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.index ["bill_address_id"], name: "index_spree_users_on_bill_address_id", using: :btree
     t.index ["deleted_at"], name: "index_spree_users_on_deleted_at", using: :btree
     t.index ["email"], name: "email_idx_unique", unique: true, using: :btree
+    t.index ["ship_address_id"], name: "index_spree_users_on_ship_address_id", using: :btree
     t.index ["spree_api_key"], name: "index_spree_users_on_spree_api_key", using: :btree
   end
 
@@ -1053,8 +1015,8 @@ ActiveRecord::Schema.define(version: 20161129113334) do
   end
 
   create_table "spree_zone_members", force: :cascade do |t|
-    t.integer  "zoneable_id"
     t.string   "zoneable_type"
+    t.integer  "zoneable_id"
     t.integer  "zone_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
