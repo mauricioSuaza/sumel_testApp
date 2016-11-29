@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/masterexploder/font_assets.git
+  revision: ae8057117df86204b9ad5894e47bcbbe1e1fb4e6
+  specs:
+    font_assets (0.1.13)
+      rack
+
+GIT
   remote: git://github.com/spark-solutions/spree.git
   revision: ce9c321ca5fef753e3be0bb7e9c729a58faba14c
   specs:
@@ -391,6 +398,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   dalli
   fog-aws
+  font_assets!
   jbuilder (~> 2.0)
   jquery-rails
   kgio

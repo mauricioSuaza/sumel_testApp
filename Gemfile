@@ -50,6 +50,7 @@ end
 group :production, :staging do
   gem 'rails_12factor'
   gem 'rack-timeout'
+  gem 'font_assets', github: 'masterexploder/font_assets'
 end
 
 # file uploades & assets

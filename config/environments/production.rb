@@ -125,4 +125,7 @@ Rails.application.configure do
     authentication: :plain,
     enable_starttls_auto: true
   }
+
+  # fix for fonts CORS issues with CloudFront
+  config.font_assets.origin = '*'
 end
