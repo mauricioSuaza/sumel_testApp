@@ -77,3 +77,5 @@ gem 'sinatra', require: nil
 gem 'spree', github: 'spree/spree', branch: ENV['SPREE_BRANCH']
 gem 'spree_gateway', github: 'spree/spree_gateway'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise'
+
+gem 'spree_braintree_vzero', github: 'spree-contrib/spree_braintree_vzero'
