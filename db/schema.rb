@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427153345) do
+ActiveRecord::Schema.define(version: 20170505185807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -1043,6 +1043,7 @@ ActiveRecord::Schema.define(version: 20170427153345) do
     t.datetime "updated_at",                                               null: false
     t.datetime "discontinue_on"
     t.datetime "created_at",                                               null: false
+    t.decimal  "sale_price",      precision: 8,  scale: 2
     t.index ["deleted_at"], name: "index_spree_variants_on_deleted_at", using: :btree
     t.index ["discontinue_on"], name: "index_spree_variants_on_discontinue_on", using: :btree
     t.index ["is_master"], name: "index_spree_variants_on_is_master", using: :btree
