@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   mount Spree::Core::Engine, at: '/'
 
+  get '/tracker', to: 'shippings#tracker', as: 'track_shipment'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
