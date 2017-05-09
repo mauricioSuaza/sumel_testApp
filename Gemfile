@@ -80,7 +80,7 @@ gem 'spree_auth_devise', github: 'spree/spree_auth_devise'
 
 gem 'spree_braintree_vzero', github: 'spree-contrib/spree_braintree_vzero'
 
-gem 'spree_simple_sales', path: '../spree_simple_sales'
+#gem 'spree_simple_sales', path: '../spree_simple_sales'
 
 gem 'active_shipping'
 
