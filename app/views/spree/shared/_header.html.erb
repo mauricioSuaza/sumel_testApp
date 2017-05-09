@@ -9,47 +9,26 @@
       </div>
     </div>
   </nav>
-  <section class="bgExercise">
-    <nav class="navbar home-nav menu navbar-fixed-top ">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <img class="logoImage" src="assets/images/logoLegacy.png">
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right mainNav">
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">TERMS</a></li>
-            <li><a href="#">SECURITY</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="#">LOGIN</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div><!--/.container-fluid -->
-    </nav>
-    <div class="container text-center">
-      <h1>Vitamin supplement for training</h1>
-      <p>See our best products.</p>
-      <a class="btn see-more" >SEE MORE</a>
-    </div>
-  </section>
-  <header id="header" data-hook>
-    <div class="container">
-      <div class="row">
-        <figure id="logo" class="col-md-4 col-sm-3" data-hook>
-          <%= logo %>
-        </figure>
-        <%= render partial: 'spree/shared/nav_bar' %>
+  <nav class="navbar home-nav menu navbar-static-top ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img class="logoImage" src="assets/images/logoLegacy.png">
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right mainNav">
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">TERMS</a></li>
+          <li><a href="#">SECURITY</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="#">LOGIN</a></li>
+        </ul>
       </div>
     </div>
-  </header>
-
-  <div class="container">
-    <%= render partial: 'spree/shared/main_nav_bar' if store_menu? %>
-  </div>
+  </nav>
 </div>
