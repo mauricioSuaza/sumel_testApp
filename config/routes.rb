@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   get '/tracker', to: 'shippings#tracker', as: 'track_shipment'
   get 'home_page' => 'spree/home#home_page'
-  
+  get '/catalog', to: 'catalog#index', as: 'catalog'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
