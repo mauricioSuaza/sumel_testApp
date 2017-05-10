@@ -16,6 +16,11 @@
   color: white;
 }
 
+
+.top_panel a{
+  color: white;
+}
+
 /*Top panel*/
 
 .panel-container{
@@ -43,14 +48,11 @@
   }
 
   .add-car{
-    background-image: url(images/shop-icon.png);
     background-position: 12px;
     background-repeat: no-repeat;
     background-size: 23px;
-    text-indent: 30px;
-    border-radius: 69px !important;
-    width: 12%;
-    background-color: white;
+    width: 14%;
+    background-color: transparent;
     display: block;
     height: 34px;
     padding: 6px 12px;
@@ -312,6 +314,7 @@
     background-color: #060606;
     height: 200px;
     width: 100%;
+    color: white !important;
   }
 
   .blackFooter .row{
@@ -323,7 +326,7 @@
     width: 13.33333% !important;
   }
 
-  .blackFooter, a{
+  .blackFooter a{
     color: white !important;
   }
 

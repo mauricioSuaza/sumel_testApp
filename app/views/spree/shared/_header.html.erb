@@ -3,9 +3,16 @@
     <div class="panel-container">
       <p class="navbar-text navbar-left">Open hours: 8.00-18.00 Mon-Sat</p>
       <div class="topPanelnavRight">
-        <button type="text" class=" navbar-right add-car">Add car</button>
-        <a class="navbar-text navbar-right">Register</a>
-        <a class="navbar-text navbar-right">Login</a> 
+        <%= link_to cart_url, :class => "navbar-right add-car", id: "link-to-cart" do %>
+          Add car
+        <% end %>
+        <script>Spree.fetch_cart()</script>
+        <%= link_to new_spree_user_registration_url, :class => "navbar-text navbar-right" do %>
+          Register
+        <% end %>
+        <%= link_to login_path, :class => "navbar-text navbar-right" do %>
+          Login
+        <% end %>
       </div>
     </div>
   </nav>
@@ -18,7 +25,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <img class="logoImage" src="assets/images/logoLegacy.png">
+        <img class="logoImage" src="/assets/images/logoLegacy.png">
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right mainNav">
@@ -26,9 +33,8 @@
           <li><a href="#">TERMS</a></li>
           <li><a href="#">SECURITY</a></li>
           <li><a href="#">CONTACT</a></li>
-          <li><a href="#">LOGIN</a></li>
+          <li><%= link_to Spree.t(:login), spree.login_path %></li>
         </ul>
-      </div>
     </div>
   </nav>
 </div>
