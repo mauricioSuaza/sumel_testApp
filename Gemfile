@@ -54,8 +54,12 @@ group :production, :staging do
 end
 
 # file uploades & assets
-gem 'paperclip' # Image Rescaling for aws
-gem 'aws-sdk', '~> 1.61.0'
+#gem 'paperclip' # Image Rescaling for aws
+#gem 'aws-sdk', '~> 1.61.0'
+
+gem "paperclip", ">= 5.0"
+gem "aws-sdk", ">= 2.0"
+
 gem 'fog-aws'
 
 # caching

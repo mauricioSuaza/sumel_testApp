@@ -20,10 +20,12 @@ if Rails.env.production?
     s3_credentials: {
       access_key_id:     ENV['AWS_ID'],
       secret_access_key: ENV['AWS_KEY'],
-      bucket:            ENV['S3_BUCKET_NAME']
+      bucket:            ENV['S3_BUCKET_NAME'],
+      region:            ENV['AWS_REGION']
     },
 
     storage:        :s3,
+    s3_region:      ENV['AWS_REGION'],
     s3_headers:     { "Cache-Control" => "max-age=31557600" },
     s3_protocol:    "https",
     bucket:         ENV['S3_BUCKET_NAME'],
