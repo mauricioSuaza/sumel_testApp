@@ -16,7 +16,7 @@
           <%= link_to Spree.t(:logout), spree.logout_path, :class => "navbar-text navbar-right" %>
         <% else %>
           <%= link_to Spree.t(:login), spree.login_path, :class => "navbar-text navbar-right" %>
-          <%= link_to "Sign up", new_spree_user_registration_path, :class => "navbar-text navbar-right" %>
+          <%= link_to "Sign up", spree.signup_path, :class => "navbar-text navbar-right" %>
 
         <% end %>
 
