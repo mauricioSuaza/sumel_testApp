@@ -98,14 +98,33 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  /*BgExercise section */
-  .middleBg{
-    height: 120vh !important;
 
+  .bgExerciseTerms{
+
+    background-color: #000;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Helvetica Neue" !important;
+    color:white;
 
   }
 
+  .termP {
+    font-family: "Helvetica Neue" !important;
+    color:white;
+    font-size: 20px;
+    font-weight: 100;
+    padding-bottom: 50px;
+    line-height: 28px;
+    text-align: justify;
 
+  }
+
+  /*BgExercise section */
+  .middleBg{
+    height: 120vh !important;
+  }
 
   .bgExercise h1{
     padding-top: 162px;
@@ -114,25 +133,34 @@
   }
 
 
+  .terms{
+
+
+  }
+
   .bgTerms{
     padding-top: 20px !important;
 
   }
 
   .bgExercise h1, .bgExercise button, .bgExercise p{
+
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     color:white;
+
   }
 
   .bgExercise p{
     font-size: 20px;
     font-weight: 100;
     padding-bottom: 50px;
-    line-height: 35px;
+    line-height: 28px;
     text-align: justify;
   }
 
-
+  .paginations{
+    width: 100% !important;
+  }
 
   .yellow-color{
     color: #d18c2e !important;
@@ -141,7 +169,7 @@
     background: rgba(216, 149, 0, 0.2);
     border: 1px solid #d89500 !important;
     border-radius: 26px !important;
-    color: white !important;
+    color: black !important;
     font-family: 'rubik-light', sans-serif;
     font-weight: 100 !important;
     padding: 11px 56px !important;
@@ -270,8 +298,14 @@
     margin-top: 2px !important;
   }
 
+  .productsmargin{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+
   .subscribeSection{
-    margin-top: 40px;
+
    }
 
   .subscribeSection button:hover{

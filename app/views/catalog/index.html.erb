@@ -1,15 +1,6 @@
-<% @body_id = 'home-page' %>
+<div class="row">
+      <div class="col-md-11 products ">
+          <%= render partial: 'spree/shared/products', locals: { products: @products } %>
+        </div>
 
-<%= render partial: 'spree/shared/search' %>
-
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render partial: 'spree/shared/taxonomies' %>
-  </div>
-<% end %>
-
-<div data-hook="homepage_products">
-  <% cache(cache_key_for_products) do %>
-    <%= render partial: 'spree/shared/products', locals: { products: @products } %>
-  <% end %>
 </div>

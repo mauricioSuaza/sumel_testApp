@@ -20,6 +20,9 @@ Rails.application.routes.draw do
 
   post '/subs', to: 'subscriptions#create', as: 'newsubscription'
 
+  resources :subscriptions
+
+
 
   Spree::Core::Engine.add_routes do
     namespace :admin do
