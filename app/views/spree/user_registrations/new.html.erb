@@ -1,22 +1,35 @@
-<% @body_id = 'signup' %>
-<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
-<div class="col-md-6 col-md-offset-3">
-  <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= Spree.t(:new_customer) %></h3>
-    </div>
-      <div id="new-customer" class="panel-body" data-hook="login">
-          <%= form_for resource, :as => :spree_user, :url => spree.registration_path do |f| %>
-            <div data-hook="signup_inside_form">
-              <%= render :partial => 'spree/shared/user_form', :locals => { :f => f } %>
-              <p><%= f.submit Spree.t(:create), :class => 'btn btn-lg btn-success btn-block' %></p>
+<div class="logincontainer">
+
+  <div class="container auth ">
+      <h1 class="text-center" style="margin-top:90px"> Register </h1>
+      <div id="big-form" class="well auth-box">
+        <%= form_for resource, :as => :spree_user, :url => spree.registration_path do |f| %>
+          <fieldset>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class=" control-label" for="textinput">Email</label>
+              <div class="">
+                <%= f.email_field :email, class: 'form-control input-md', tabindex: 1, placeholder: Spree.t(:email) %>
+              </div>
             </div>
-          <% end %>
-          <div class="text-center">
-            <%= Spree.t(:or) %> 
-              <%= link_to Spree.t(:login_as_existing), spree.login_path %>
-          </div>
-          <div data-hook="login_extras"></div>
+
+            <!-- Password input-->
+            <div class="form-group">
+              <label class=" control-label" for="passwordinput">Password</label>
+              <div class="">
+                <%= f.password_field :password, class: 'form-control input-md', tabindex: 2, placeholder: Spree.t(:password) %>
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <%= f.submit "Sign up", class: 'btn btn-lg btn-success btn-block button-fixed', tabindex: 3 %>
+            </div>
+
+          </fieldset>
+        <% end %>
       </div>
-  </div>
+      <div class="clearfix"></div>
+    </div>
 </div>
