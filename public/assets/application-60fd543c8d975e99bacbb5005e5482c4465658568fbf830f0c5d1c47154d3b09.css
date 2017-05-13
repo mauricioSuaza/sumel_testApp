@@ -1,3 +1,105 @@
+.circle{
+	background-color: #060606;
+	height: 142px;
+	width: 142px;
+	border-radius: 75px;
+	margin: 0 auto;
+}
+
+.teamSection{
+	height: 780px;
+}
+
+.teamSection h2{
+	font-weight: 700;
+}
+
+.teamSection h3{
+	font-weight: 100;
+  font-size: 23px;
+  line-height: 1.2;
+  color: #4d4d4d;
+}
+
+.teamSection .row:nth-child(1){
+	padding-top: 100px;
+	padding-bottom: 63px;
+}
+
+.description{
+	width: 960px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.see-more{
+  background: white;
+  border: 2px solid #d18c2e !important;
+  border-radius: 26px !important;
+  color: black !important;
+  font-family: 'rubik-light', sans-serif;
+  font-weight: 100 !important;
+  padding: 9px 32px !important;
+  font-size: 21px !important;
+}
+
+.see-more:hover{
+	color: white !important;
+}
+
+@media screen and  (min-width: 1000px){
+	.p-width {
+		width: 290px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+}
+/*Find us section*/
+
+
+.findUs{
+	font-family: 'Rubik', sans-serif !important;
+  margin-top: 50px;
+}
+
+.findUs p{
+	width: 530px;
+	margin: 0 auto;
+	color: #acb4b6;
+	font-weight: 300;
+	font-size: 19px;
+	margin-bottom: 54px;
+}
+
+.findUs .title{
+	font-size: 16px;
+	font-weight: 500; 
+}
+
+.findUs .subtitle{
+	font-size: 15px;
+	font-weight: 200; 
+	color: #acb4b6;
+}
+
+.mb-32{
+	margin-bottom: 32px;
+}
+
+.findUseform input{
+	border: 3px solid #e0e0e0;
+	border-radius: 0;
+	font-weight: lighter;
+  font-size: 14px;
+}
+
+.findUseform textarea{
+	border: 3px solid #e0e0e0;
+	border-radius: 0;
+	font-weight: lighter;
+  font-size: 14px;
+}
 .pl-0{padding-left: 0 !important; }
 .mb-0{margin-bottom: 0 !important;}
 .mt-0{margin-top: 0 !important;}
@@ -508,3 +610,41 @@
   margin-bottom: 0px !important;
 
 }
+.redBg{
+	background: none;
+	background-color: #ff0017 !important;
+}
+
+.teamSection{
+	height: auto;
+}
+
+.see-more:hover{
+ 	color:white !important;
+}
+
+.mb-40{
+	margin-bottom: 40px !important;
+}
+
+.teamSection h1{
+	font-weight: 700;
+  margin-top: 60px;
+  color: #4d4d4d;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

@@ -1,48 +1,107 @@
 <% @body_id = 'product-details' %>
 
-<% cache cache_key_for_product do %>
-  <div data-hook="product_show" class="row" itemscope itemtype="https://schema.org/Product">
-    <div class="col-md-4 col-sm-5" data-hook="product_left_part">
-      <div data-hook="product_left_part_wrap">
-        <div id="product-images" data-hook="product_images">
-          <div id="main-image" class="panel panel-default" data-hook>
-            <div class="panel-body text-center">
-              <%= product_image(@product, itemprop: "image") %>
+<div class="container productContainer">
+
+  <% cache cache_key_for_product do %>
+    <div data-hook="product_show" class="row" itemscope itemtype="https://schema.org/Product">
+      <div class="col-md-4 col-sm-5" data-hook="product_left_part">
+        <div data-hook="product_left_part_wrap">
+          <div id="product-images" data-hook="product_images">
+            <div id="main-image" class="panel panel-default" data-hook>
+              <div class="panel-body text-center">
+                <%= product_image(@product, itemprop: "image") %>
+              </div>
+            </div>
+            <div id="thumbnails" data-hook>
+              <%= render partial: 'thumbnails' %>
+            </div>
+
+            <div class="buynow col-md-12">
+
+              <% if @product.price_in(current_currency) && !@product.price.nil? %>
+                <div data-hook="product_price" class="col-md-12">
+                  <div id="product-price">
+                    <h3 class="product-section-title"><%= Spree.t(:price) %></h3>
+                    <div>
+                      <span class="lead price selling" itemprop="price">
+                        <%= display_price(@product) %>
+                      </span>
+                      <span itemprop="priceCurrency" content="<%= @product.currency %>"></span>
+                    </div>
+
+                    <% if @product.master.can_supply? %>
+                      <link itemprop="availability" href="https://schema.org/InStock" />
+                    <% elsif @product.variants.empty? %>
+                      <br />
+                      <span class="out-of-stock"><%= Spree.t(:out_of_stock) %></span>
+                    <% end %>
+                  </div>
+
+                  <% if @product.can_supply? %>
+                    <div class="add-to-cart">
+                      <br />
+                      <div class="input-group">
+                        <div class="col-md-4">
+                          <%= number_field_tag :quantity, 1, class: 'title form-control', min: 1 %>
+                        </div>
+
+
+                        <div class="col-md-8">
+                            <span class="input-group-btn">
+                              <%= button_tag class: 'btn btn-success', id: 'add-to-cart-button', type: :submit do %>
+                                <%= Spree.t(:add_to_cart) %>
+                              <% end %>
+                            </span>
+                        </div>
+
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              <% else %>
+                <div id="product-price">
+                  <br />
+                  <div>
+                    <span class="price selling" itemprop="price">
+                      <%= Spree.t('product_not_available_in_this_currency') %>
+                    </span>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+
+          </div>
+
+          <div class="col-md-12" data-hook="product_properties">
+            <%= render partial: 'properties' %>
+          </div>
+
+          <div data-hook="promotions">
+            <%= render partial: 'promotions' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8 col-sm-7" data-hook="product_right_part">
+        <div data-hook="product_right_part_wrap">
+          <div id="product-description" data-hook="product_description">
+            <h1 class="product-title" itemprop="name"><%= @product.name %></h1>
+
+            <div class="" itemprop="description" data-hook="description">
+              <%= product_description(@product) %>
+            </div>
+
+            <div id="cart-form" data-hook="cart_form">
+              <%= render partial: 'cart_form' %>
             </div>
           </div>
-          <div id="thumbnails" data-hook>
-            <%= render partial: 'thumbnails' %>
+
+          <div id="taxon-crumbs" class=" five " data-hook="product_taxons">
+            <%= render partial: 'taxons' %>
           </div>
-        </div>
-
-        <div data-hook="product_properties">
-          <%= render partial: 'properties' %>
-        </div>
-
-        <div data-hook="promotions">
-          <%= render partial: 'promotions' %>
         </div>
       </div>
     </div>
+  <% end %>
 
-    <div class="col-md-8 col-sm-7" data-hook="product_right_part">
-      <div data-hook="product_right_part_wrap">
-        <div id="product-description" data-hook="product_description">
-          <h1 class="product-title" itemprop="name"><%= @product.name %></h1>
-
-          <div class="well" itemprop="description" data-hook="description">
-            <%= product_description(@product) %>
-          </div>
-
-          <div id="cart-form" data-hook="cart_form">
-            <%= render partial: 'cart_form' %>
-          </div>
-        </div>
-
-        <div id="taxon-crumbs" class=" five " data-hook="product_taxons">
-          <%= render partial: 'taxons' %>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
+</div>
