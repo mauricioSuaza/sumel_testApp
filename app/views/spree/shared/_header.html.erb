@@ -3,17 +3,21 @@
     <div class="panel-container">
       <p class="navbar-text navbar-left">Open hours: 8.00-18.00 Mon-Sat</p>
       <div class="topPanelnavRight">
-        <a href="/cart" data-hook class="navbar-right add-car" id="link-to-cart"> Add to cart</a>
 
-        <script>Spree.fetch_cart()</script>
 
-        <a href="#"></a>
 
         <% if spree_current_user %>
+          <a href="/cart" data-hook class="navbar-right add-car" id="link-to-cart"> Add to cart</a>
+
+          <script>Spree.fetch_cart()</script>
+
+          <a href="#"></a>
           <%= link_to Spree.t(:my_account), spree.account_path,  :class => "navbar-text navbar-right" %>
           <%= link_to Spree.t(:logout), spree.logout_path, :class => "navbar-text navbar-right" %>
         <% else %>
           <%= link_to Spree.t(:login), spree.login_path, :class => "navbar-text navbar-right" %>
+          <%= link_to "Sign up", new_spree_user_registration_path, :class => "navbar-text navbar-right" %>
+
         <% end %>
 
       </div>
@@ -37,7 +41,10 @@
           <li><a href="/terms">TERMS</a></li>
           <li><a href="/security">SECURITY</a></li>
           <li><a href="/contact">CONTACT</a></li>
-          <li><%= link_to Spree.t(:login), spree.login_path %></li>
+          <% if spree_current_user %>
+          <% else %>
+            <li><a href="/login">LOGIN</a></li>
+          <% end %>
         </ul>
     </div>
   </nav>
