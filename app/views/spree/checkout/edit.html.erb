@@ -1,3 +1,4 @@
+<div class="container">
 <% @body_id = 'checkout-page' %>
 <% content_for :google_analytics do %>
   <%= render partial: 'spree/shared/google_checkout.js', locals: { order: @order, step_number: (@order.checkout_steps.index(@order.state) + 1) } %>
@@ -48,3 +49,4 @@
 <% if I18n.locale != :en %>
   <%= javascript_include_tag 'jquery.validate/localization/messages_' + I18n.locale.to_s.downcase.gsub('-', '') %>
 <% end %>
+</div>
