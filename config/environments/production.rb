@@ -79,7 +79,7 @@ Rails.application.configure do
   end
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = config.action_mailer.asset_host = 'https://sumel.herokuapp.com' 
+  config.action_controller.asset_host = config.action_mailer.asset_host = 'https://sumel.herokuapp.com'
   routes.default_url_options[:host] = config.action_controller.asset_host
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
@@ -115,15 +115,26 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # sendgrid mail
+  config.action_mailer.default_url_options = { :host => "https://sumel.herokuapp.com/" }
+
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.perform_deliveries = true
+
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    user_name: ENV['SENDGRID_USERNAME'],
-    password: ENV['SENDGRID_PASSWORD'],
-    domain: config.domain,
-    address: 'smtp.sendgrid.net',
-    port: 587,
-    authentication: :plain,
-    enable_starttls_auto: true
+  config.action_mailer.default :charset => "utf-8"
+
+  #force ssl for heroku connection
+  config.force_ssl = true
+
+  ActionMailer::Base.smtp_settings = {
+  :user_name => ENV["SENDGRID_USER"],
+  :password =>  ENV["SENDGRID_PASSWORD"],
+  :domain => 'legacysupplements.com',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
   }
 
   # fix for fonts CORS issues with CloudFront
