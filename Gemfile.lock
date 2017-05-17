@@ -267,6 +267,10 @@ GEM
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
     kgio (2.11.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.5)
@@ -450,6 +454,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kgio
+  letter_opener
   newrelic_rpm
   paperclip (>= 5.0)
   pg
@@ -477,4 +482,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.5
+   1.13.2

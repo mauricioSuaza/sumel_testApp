@@ -1,9 +1,8 @@
 <section class="bgExercise">
-
   <div class="container text-center">
-    <h1>Vitamin supplement for training</h1>
-    <p style="text-align:center;">See our best products.</p>
-    <a class="btn see-more"  href="/catalog" >SEE MORE</a>
+    <h1 class='header__animation-chunk'>Vitamin supplement for training</h1>
+    <p class='header__animation-chunk' style="text-align:center;">See our best products.</p>
+    <a class="btn see-more header__animation-chunk"  href="/catalog" >SEE MORE</a>
   </div>
 </section>
 <section class="productSection">
@@ -16,10 +15,20 @@
     </p>
     <div class="row text-uppercase">
       <div class="col-md-6 text-right">
-        <a class="btn see-more" href="/catalog">shop best sellers</a>
+        <%= link_to "", class: "btn send-message" do%>
+          <span>
+            <span class="first text-uppercase">shop best sellers</span>
+            <span class="second text-uppercase">shop best sellers</span>
+          </span>
+        <%end%>
       </div>
       <div class="col-md-6 text-left">
-        <a class="btn see-more viewAll" href="/catalog" >view all products</a>
+        <%= link_to "", class: "btn send-message" do%>
+          <span>
+            <span class="first text-uppercase">view all products</span>
+            <span class="second text-uppercase">view all products</span>
+          </span>
+        <%end%>
       </div>
     </div>
 
@@ -53,6 +62,12 @@
       </span>
     </button>
   </a>
+  </div>
+</section>
 
+<section class="bg-with-copy">
+  <div class="content">
+    <h1>Lorem ipsum dolor sit amet sunt in culpa qui</h1>
+    <h2>proident, mollit anim id est laborum.</h2>
   </div>
 </section>

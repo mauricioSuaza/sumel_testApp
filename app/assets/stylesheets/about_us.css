@@ -6,13 +6,18 @@
 	margin: 0 auto;
 }
 
-.teamSection{
-	height: 780px;
-}
 
 .teamSection h2{
 	font-weight: 700;
 }
+
+.about-us-first h1{
+	padding-top: 50px !important;
+}
+
+.about-us-first{
+	height: 35vh !important;
+} 
 
 .teamSection h3{
 	font-weight: 100;
@@ -21,9 +26,8 @@
   color: #4d4d4d;
 }
 
-.teamSection .row:nth-child(1){
-	padding-top: 100px;
-	padding-bottom: 63px;
+.teamSection h1{
+	padding-top: 50px;
 }
 
 .description{
@@ -42,6 +46,7 @@
   font-weight: 100 !important;
   padding: 9px 32px !important;
   font-size: 21px !important;
+  margin-bottom: 4% !important;
 }
 
 .see-more:hover{
@@ -53,5 +58,23 @@
 		width: 290px;
 	  margin-left: auto;
 	  margin-right: auto;
+	}
+}
+
+@media screen and  (max-width: 768px){
+	.about-us-first{
+		height: 50vh !important;
+	}
+
+	.about-us-first h1{
+		font-size: 40px !important;
+	}
+
+	.teamSection h3 {
+		padding: 30px;
+	}
+
+	.teamSection .description{
+		width: auto;
 	}
 }

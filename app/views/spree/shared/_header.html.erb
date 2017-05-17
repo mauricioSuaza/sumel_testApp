@@ -1,32 +1,25 @@
 <div id="spree-header fixed-margin">
-  <nav class="top_panel">
+  <nav class="top_panel  hidden-sm hidden-xs">
     <div class="panel-container">
       <p class="navbar-text navbar-left">Open hours: 8.00-18.00 Mon-Sat</p>
       <div class="topPanelnavRight">
-
-
-
         <% if spree_current_user %>
           <a href="/cart" data-hook class="navbar-right add-car" id="link-to-cart"> Add to cart</a>
-
           <script>Spree.fetch_cart()</script>
-
           <a href="#"></a>
           <%= link_to Spree.t(:my_account), spree.account_path,  :class => "navbar-text navbar-right" %>
           <%= link_to Spree.t(:logout), spree.logout_path, :class => "navbar-text navbar-right" %>
         <% else %>
           <%= link_to Spree.t(:login), spree.login_path, :class => "navbar-text navbar-right" %>
           <%= link_to "Sign up", spree.signup_path, :class => "navbar-text navbar-right" %>
-
         <% end %>
-
       </div>
     </div>
   </nav>
   <nav class="navbar home-nav menu navbar-static-top fixed-margin">
     <div class="container-fluid col-md-12">
       <div class="navbar-header col-md-6">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <button type="button" class="navbar-toggle collapsed mobile-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -34,7 +27,7 @@
         </button>
         <img class="logoImage " src="/assets/images/LegacySuplements.png">
       </div>
-      <div id="navbar" class="navbar-collapse collapse col-md-6">
+      <div id="navbar" class="navbar-collapse collapse col-md-6 navbar-content">
         <ul class="nav navbar-nav navbar-right mainNav">
           <li><a href="/catalog">CATALOG</a></li>
           <li><a href="/about">ABOUT</a></li>
