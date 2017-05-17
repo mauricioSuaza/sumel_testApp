@@ -7,7 +7,7 @@
       <p> Any other use of the information contained on this Web Site is prohibited without our express written consent. Use of Information This Web site provides information that, while useful, must not be used as a substitute for the advice of your own advisor's. Information available from this Web Site is not intended to be used  change without notice. Not Offering Any Advice The content is for informational purposes only and is not intended to provide specific advice for you, and should not be relied upon in that regard. You should not act or rely on the content without seeking the advice of a professional.  Except for that individually-identifiable information collected from you in accordance with our Privacy Policy, all comments, remarks, suggestions, ideas or other information communicated will become the exclusive property of www.purchasepeptides.net and you grant to www.purchasepeptides.net a royalty-free, perpetual, irrevocable, world-wide, non-exclusive license to use or reproduce the same. Is free to copy, disclose, distribute or analyze any such information for any and all purposes and are in no way obligated to compensate you for any such information.
     </p>
     <div class="text-center">
-    	<button class="btn send-message open-text">
+    	<button class="btn send-message open-text" style="color: white">
 	      <span>
 	        <span class="first text-uppercase">See more</span>
 	        <span class="second text-uppercase">See more</span>
@@ -86,10 +86,10 @@
 
 <script>
 	jQuery(document).ready(function($) {
-		$('more-text').hide();
-		$('more-text').on('click', '.open-text', function(event) {
+		$('.more-text').hide();
+		$('.open-text').click(function(event) {
 			event.preventDefault();
-			debugger;
+			$('.more-text').toggle();
 		});
 	});
 </script>
