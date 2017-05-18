@@ -42,3 +42,15 @@
 	font-weight: lighter;
   font-size: 14px;
 }
+
+@media (max-width: 1000px){
+
+	.findUs p{
+		width: auto;
+		padding: 0 5%;
+	}
+
+	.findUs .contanctCompanyInf{
+		text-align: center !important;
+	}
+}
