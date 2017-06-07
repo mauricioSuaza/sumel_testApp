@@ -11,6 +11,7 @@
   <%= stylesheet_link_tag  'spree/home/header-tablet'%>
   <head data-hook="inside_head">
     <%= render partial: 'spree/shared/head' %>
+    <script src="https://use.fontawesome.com/e4b26ed800.js"></script>
     <style>
       body{
         line-height: 1.2;
@@ -100,15 +101,15 @@
       }
 
       #navbar li a:hover{
-        background-color: white !important;
+        background-color:  #4c4c4c !important;
         border-color: white !important;
-        color: black !important;
-        padding-top: 10px !important;
+        color: white !important;
+        padding-top: 53px !important;
         padding-bottom: 10px !important;
-        border-radius: 11px !important;
-        margin-top: 5px !important;
-        transition: all 0.4s ease-out 0s;
+        margin-top: -38px !important;
+        transition: all 0.2s ease-out 0s;
         font-weight: 500;
+        height: 103px;
       }
     </style>
   </head>
@@ -120,9 +121,7 @@
     <div class="flash-messages-all">
       <%= flash_messages%>
     </div>
-    
-    
-
+  
       <%= yield %>
 
       <section class="subscribeSection ">

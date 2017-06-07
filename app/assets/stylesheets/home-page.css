@@ -5,13 +5,13 @@
 .mb-20{margin-bottom: 20px !important;}
 
 .top_panel {
-  min-height: 45px;
+  min-height: 38px;
   margin-top: 0;
   position: relative;
   z-index: 10000;
   font-size: 0.8125em;
   font-weight: 400;
-  background: rgba(216, 149, 0, 1);
+  background: #1253a7;
   color: white;
 }
 
@@ -27,6 +27,9 @@
 }
 
 /*Navbar*/
+  .mainNav em{
+    font-weight: 900;
+  }
 
   .row{
     margin: 0 !important;
@@ -68,23 +71,27 @@
   }
 
   .home-nav{
-    background-color: #0f0f0f;
+    background-color: white;
     border-radius: 0;
     font-family: 'rubik-light', sans-serif;
     font-size: 15px;
     height: 103px;
     margin-bottom: 0;
-  }li a{
-    color:#fffefe;
-  }ul{
+  } 
+
+  .home-nav li a{
+    color: #1253a7 !important;
+    font-size: 17px;
+  }
+
+  .home-nav ul{
     padding-top: 26px;
     padding-bottom: 29px;
   }
 
   .logoImage{
     width: 40%;
-    padding-top: 24px;
-    padding-bottom: 22px;
+    padding-top: 15px;
     margin-left: 42px;
   }
 
@@ -486,10 +493,15 @@
 @media (min-width: 1000px){
   .mainNav, .topPanelnavRight{
     margin-right: 0% !important;
+    left: 70px;
+  }
+
+  .mainNav{
+    padding-top: 12px !important;
   }
 
   .topPanelnavRight a{
-     margin-right: 2% !important;
+     margin-right: 1% !important;
   }
 }
 
@@ -549,7 +561,7 @@
 }
 
 .fixed-margin{
-
+  margin-top: -21px;
   margin-bottom: 0px !important;
 }
 
