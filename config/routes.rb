@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get '/about', to: 'static#about', as: 'about'
   get '/terms', to: 'static#terms', as: 'terms'
+  get '/empresa', to: 'static#empresa', as: 'empresa'
   get '/security', to: 'static#security', as: 'security'
   get '/contact', to: 'messages#new', as: 'contact'
 
@@ -22,8 +23,10 @@ Rails.application.routes.draw do
 
   resources :subscriptions
 
-
-
+  Spree::Core::Engine.routes.prepend do
+    post '/cotizar', to: 'orders#cotizar', as: 'cotizar'
+  end
+  
   Spree::Core::Engine.add_routes do
     namespace :admin do
       resources :subscriptions

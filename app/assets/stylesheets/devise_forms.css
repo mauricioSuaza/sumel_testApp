@@ -27,6 +27,10 @@
   display:block;
   padding-top: 20px;
 }
+
+.auth-box{
+  background: #cbccce;
+}
 .auth .auth-box legend{
   color:#fff;
   border:none;
@@ -37,9 +41,7 @@
   background-color:#fff;
   max-width:460px;
   margin:0 auto;
-  border:1px solid rgba(255, 255, 255, 0.4);;
-  background-color: rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.2);
+  background: #cbccce;
   margin-top:40px;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.32);
   -moz-box-shadow:    0px 0px 30px 0px rgba(50, 50, 50, 0.32);
@@ -187,12 +189,6 @@
 .auth form .btn-link:hover{
   background:none;
 }
-
-.button-fixed{
-  width: 50% !important;
-  margin: 0 auto !important;
-}
-
 .auth label.label-floatlabel {
   font-weight: 300;
   font-size: 11px;

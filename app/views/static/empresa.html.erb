@@ -1,0 +1,202 @@
+<div class="empresa-section">
+  <div class="row">
+    <div class="col-md-6 empresa-left-section">
+      <img src="/assets/images/full_logo_white.png" class="sumel-logo-blue">
+      <div class="empresa-left-text">
+        <h5>Nos reconocen por ser:</h5>
+        <h1>Una Empresa con <br> Calidad humana</h1>
+        <p>
+          Una compañia que se preocupa por la felicidad <br> de sus clientes. Ofrecemos productos de alta
+          calidad, <br> que dejan atrás cualquier tipo de límites.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="/assets/images/space.png" class="space-logo">
+        </div>
+        <div class="col-md-9 space-text">
+          <p class="history">- Nuestra historia</p>
+          <p>- Lineas de negocio</p>
+        </div>
+      </div>
+      <div class="learn-more">
+        <%=link_to "¿Más de nosotros?", {}, class: 'mas-button'%>
+      </div>
+    </div>
+    <div class="col-md-6 empresa-right-section first"></div>
+    <div class="col-md-6 empresa-right-section history-div">
+      <nav class="subscription-bar close-navbar">
+        <div>
+          <div class="nav navbar-nav navbar-left">
+            <div class="navbar-left navbar-left">
+              <i class="fa fa-window-close-o" aria-hidden="true"></i>
+            </div>
+          </div> 
+          <div>
+            <div class="right-nav-history">
+              <div>
+                <i class="navbar-right fa fa-facebook" aria-hidden="true"></i>
+              </div> 
+              <div >
+                <i class="navbar-right fa fa-twitter" aria-hidden="true"></i>
+              </div> 
+              <div>
+                <i class="navbar-right fa fa-instagram" aria-hidden="true"></i>
+              </div> 
+            </div>
+          </div> 
+        </div>
+      </nav>
+      <br>
+      <br>
+      <img src="/assets/images/history-bg.png">
+      <div class="content">
+        <h2>Ofrecemos <em>Calidad</em> <br> En todos nuestros Productos</h2>
+        <p class="text-justify">SUMEL SAS, con sede principal en la ciudad de Medellín fue fundada en Octubre de 1983 y tiene como actividad primordial la venta y alquiler de equipos médicos hospitalarios, equipos para hospitalización en casa -oxigeno medicinal 24 horas y Biotecnologia. Adicional contamos con un área de Ingeniría Biomédica. Todas nuestras actividades están enfocadas en la satisfacción total de nuestros clientes, bajo los conceptos de: puntualidad en las entregas, manejo de productos de alta calidad, excelente precio en productos y servicios, servicio postventa 24 horas y servicio técnico directo y certificado por el INVIMA.</p>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2">
+            <h2>Servimos</h2>
+            <p>Con sentido humano</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .history-div{
+    display: none
+  }
+
+  .empresa-section{
+    height: 110vh;
+  }
+
+  .empresa-left-section{
+    background: #0038A7;
+    height: 110vh;
+    color: white;
+  }
+
+  .first{
+    background: url(/assets/images/sumel_itagui.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .empresa-right-section{
+    height: 110vh;
+  }
+
+  .sumel-logo-blue{
+    width: 350px;
+    margin: 0 auto;
+    padding-top: 60px;
+    margin-left: 20px;
+  }
+
+  .empresa-left-text{
+    padding-left: 50px;
+  }
+
+  .empresa--text h5{
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-top: 40px;
+  }
+
+  .empresa-left-text h1{
+    font-size: 52px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 800;
+  }
+     
+  .empresa-left-text p{
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .space-logo{
+    margin-left: 35px;
+  }
+
+  .space-text{
+    margin-top: 40px;
+    padding-left: 0px;
+    font-size: 16px;
+  }
+
+  .mas-button{
+    background: #e00616;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 1px 0px 3px black;
+  }
+
+  .mas-button:hover{
+    color: white;
+  }
+
+  .learn-more{
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 16px;   
+  }
+
+  .close-navbar{
+    margin-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .close-navbar .fa{
+    color: #909090;
+    font-size: 22px;
+    margin-left: 22px;
+  }
+
+  .right-nav-history{
+    margin-right: 50px;
+  }
+
+  .history-div .content{
+    padding-left: 40px;
+    color: #797979;
+  }
+
+  .history-div .content em{
+    color: black;
+    font-style: initial;
+  }
+
+  .history-div .content h2{
+    font-weight: 400;
+    font-size: 40px;
+  }
+
+  .history-div .content p{
+    font-weight: 200;
+  }
+
+</style>
+
+<script>
+  jQuery(document).ready(function($) {
+    $('.history').click(function(event) {
+      $('.first').hide();
+      $('.history-div').show();
+    });
+
+    $('.fa-window-close-o').click(function(event) {
+      $('.history-div').hide();
+      $('.first').show();
+    });
+  });
+</script>
