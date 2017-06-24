@@ -98,10 +98,23 @@
   /*BgExercise section*/
   .bgExercise{
     height: 100vh;
-    background: url(images/bg.png);
+    background: url(/assets/images/home.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .todo{
+    font-size: 136px;
+    font-weight: 900;
+    margin-bottom: 0;
+  }
+
+  .depende{
+    font-size: 42px;
+    margin-top: 1px;
+    font-weight: 900;
+    margin-bottom: 10px;
   }
 
   .header__animation-chunk {
@@ -161,13 +174,6 @@
     height: 120vh !important;
   }
 
-  .bgExercise h1{
-    padding-top: 162px;
-    font-size: 51px;
-    font-weight: 900;
-  }
-
-
   .bgTerms{
     padding-top: 20px !important;
 
@@ -178,10 +184,23 @@
     color:white;
   }
 
+  .bgExercise div{
+    background: rgba(255, 255, 255, 0.8);
+    width: 800px;
+    position: relative;
+    top: 25vh;
+    border-radius: 20px;
+  }
+
+  .bgExercise h1, .bgExercise p{
+    color: #1452a9;
+  }
+
+
   .bgExercise p{
     font-size: 20px;
     font-weight: 100;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     line-height: 28px;
   }
 
@@ -192,15 +211,16 @@
   .yellow-color{
     color: #d18c2e !important;
   }
+
   .see-more{
-    background: rgba(216, 149, 0, 0.2);
-    border: 1px solid #d89500 !important;
+    background: rgba(206, 40, 40, 0.6);
+    border: 1px solid #e0514b !important;
     border-radius: 26px !important;
     color: white !important;
     font-family: 'rubik-light', sans-serif;
-    font-weight: 100 !important;
-    padding: 11px 56px !important;
-    font-size: 18px !important;
+    font-weight: 100 !important;    
+    padding: 7px 20px !important;
+    font-size: 12px !important;
   }
 
   .productContainer{
@@ -221,7 +241,7 @@
   }
 
   .see-more:hover{
-    background: rgba(216, 149, 0, 0.6);
+    background: rgba(206, 40, 40, 1);
   }
 
 
@@ -238,12 +258,21 @@
   }
 
   .productsDescription {
-    padding-top: 120px;
+    padding-top: 75px;
+    padding-left: 70px !important;
+    padding-right: 70px !important;
   }
 
   .productsDescription h6{
     padding-top: 40px;
   }
+
+  .productsDescription h3{
+    margin-bottom: 0;  
+    font-weight: 200;
+    padding-top: 20px;
+  }
+
 
   .productsDescription .col-md-6{
     padding: 0;
@@ -259,24 +288,46 @@
     padding: 0 8%;
   }
 
+  .cotizar-button{
+    background: #cd2928;
+    color: white;
+    border-radius: 0 !important;
+    padding: 5px 35px !important;
+  }
 
+  .cotizar-button:hover{
+    background: rgba(205, 41, 40, 0.8) !important;
+    color: white !important;
+  }
 
   .photo1{
-    background: url(images/photo1.jpg);
+    background: url(images/photo1.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 450px;
   }
 
+  .photo2{
+    background: url(images/photo2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+  }
+
+  .photo3{
+    background: url(images/photo2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+  }
+  
   .productSection p{
     width: 1040px;
     margin: 0 auto;
-    color: #acb4b6;
     font-size: 17px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 300;
     padding-bottom: 30px;
-    padding-top: 30px;
   }
 
   .productSection .see-more{
@@ -303,8 +354,8 @@
   }
 
   .logo{
-    width: 250px;
-
+    width: 410px;
+    margin-top: 100px;
   }
 
   .productSection .title{
@@ -326,6 +377,8 @@
 
   .products{
     margin-top: 50px;
+    width: 800px;
+    margin: 0 auto !important;
   }
 
   .scrollable{
@@ -348,13 +401,44 @@
 
   }
 
-  .subscribeSection{
+  .block-text, .block-text2, .block-text3 {
+    visibility: hidden;  
+    color: white;
+    background: rgba(0, 56, 167, 0.7);
+    margin: 0 auto;
+    height: 100%;
+    padding-top: 33%; 
+    font-weight: 100;
+    font-family: "Helvetica Neue" !important;
+  }
 
-   }
+  .block-text h3, .block-text2 h3, .block-text3 h3{
+    border: 3px solid white;
+    width: 39%;
+    padding: 8px;
+    font-weight: 500 !important;
+    margin: 0 auto !important;
+  }
+
+  .block-text p, .block-text2 p, .block-text3 p{
+    width: 100% !important;
+    padding: 8px;
+    font-weight: 500 !important;
+    font-size: 32px !important;
+    margin: 0 auto !important;
+  }
 
   .subscribeSection button:hover{
     background:rgba(255,255,255, 0.9)!important;
     color: rgba(216, 149, 0, 0.6)!important;
+  }
+
+  .title-product{
+    text-transform: uppercase;
+  }
+
+  .grey-bg{
+    background: #efefef;
   }
 
   /*Subscription section*/
@@ -411,6 +495,78 @@
   .topImage{
   }
 
+  /*sedes*/
+  .sedes {
+    margin-top: 100px;
+    color: #1254aa;
+  }
+
+  .sedes h1{
+    font-weight: 900;
+    font-size: 42px;
+  }
+
+  .sedes-bg{
+    background: url(/assets/images/home.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 510px;
+  }
+
+  .sedes-bg .col-md-4{
+    padding: 0;
+  }
+
+  .sedes-bg .col-md-4.color1 .one{
+    visibility: hidden;
+    -webkit-clip-path:  polygon(0% 0, 100% 0%, 91% 100%, 0% 100%);
+    clip-path:  polygon(0% 0, 100% 0%, 91% 100%, 0% 100%);
+    background: rgba(10, 51, 133, 0.7);
+    height: 510px;
+  }
+
+  .sedes-bg .col-md-4.color2 .second{
+    visibility: hidden;
+    -webkit-clip-path: polygon(10% 0, 100% 0%, 91% 100%, 0% 100%);
+    clip-path:  polygon(10% 0, 100% 0%, 91% 100%, 0% 100%);
+    background: rgba(10, 51, 133, 0.7);
+    height: 510px;
+  }
+
+  .sedes-bg .col-md-4.color3 .third{
+    visibility: hidden;
+    -webkit-clip-path: polygon(11% 0, 100% 0%, 100% 100%, 2% 100%);
+    clip-path:  polygon(11% 0, 100% 0%, 100% 100%, 2% 100%);
+    background: rgba(10, 51, 133, 0.7);
+    height: 510px;
+  }
+
+  .sedes-bg .col-md-4 p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 38px;
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+    border: 3px solid white;
+  }
+  
+  /*Noticias section*/
+
+  .home-noticias{
+    background: rgb(10, 51, 133);
+    height: 180px;
+  }
+
+  .home-noticias h1{
+    color: white;
+    font-size: 54px;
+    margin-top: 54px;
+    padding-left: 50px;
+    font-weight: 900;
+  }
+
   /*bg-with-copy SECTION*/
 
   .bg-with-copy{
@@ -441,7 +597,96 @@
     font-weight: 100;
     margin-top: 0;
   }
+
+  /*Saber mas section*/
+
+  .bg-home3{
+    background: url(/assets/images/home3.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    height: 500px;
+  }
+
+  .bluebg-home{
+    background: #1252a9;
+    background-repeat: repeat;
+    height: 500px;
+    padding-left: 50px !important;
+    color: white;
+  }
+
+  .bluebg-home h1:nth-child(1){
+    font-size: 112px;
+    font-weight: 900;
+    margin-bottom: 0px;
+  }
+
+  .bluebg-home h1:nth-child(2){
+    font-size: 69px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .bluebg-home h1:nth-child(3){
+    font-size: 112px;
+    margin-top: 0;
+  }
+
+  .saber-mas-bg{
+    color: white;
+    background: #e0514b;
+    padding: 14px 96px;
+    font-size: 12px;
+    font-weight: 
+  }
+
+  .saber-mas-bg:hover{
+    color: white;
+    background: rgba(224, 81, 75, 0.7);
+  }
+
+  /*CHEVERE SECTION*/
+  .chevere{
+    background: #dbd9da;
+    height: 200px;
+  }
+
+  .chevere h1{
+    color: #1252a9;
+    font-weight: 900;
+    padding: 38px 32px;
+  }
+
+  .exclamacion{
+    position: relative;
+    left: -70px;
+    top: 15px;
+  }
+
+  .chevere .content{
+    padding: 38px 32px;
+  }
+
+  .chevere .content h5{
+    color: #535353;
+    font-weight: 900;
+  }
+
+  .chevere .content a{
+    color: #8c8c8c;
+    font-weight: 200;
+  }
+
+
+
   /*footer*/
+
+  .inscribete{
+    height: 40px;
+    background: #7f7f7f;
+  }
+
+  /*------------*/
   .blackFooter{
     background-color: #060606;
     height: 200px;
@@ -683,7 +928,4 @@
     width: 12.333333% !important;
   }
 }
-
-
-
 

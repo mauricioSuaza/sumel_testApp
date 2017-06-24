@@ -110,111 +110,112 @@
       <%= flash_messages%>
     </div>
   
-      <%= yield %>
+    <%= yield %>
 
-      <section class="subscribeSection ">
-        <div class="row">
-          <div class="col-md-9 yellowSection">
-            <div class="container">
-              <h1>Subscribe and receive information about our products.</h1>
-            </div>
-
-            <% @subscription = Subscription.new%>
-            <%= form_for(@subscription ) do |f| %>
-            <% if @subscription.errors.any? %>
-              <div id="error_explanation">
-                <h2><%= pluralize(@subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
-
-                <ul>
-                <% @subscription.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-                <% end %>
-                </ul>
-              </div>
-            <% end %>
-
-            <div class="row">
-              <div class="col-md-5">
-                <p> <span class="f21"> Email</span>
-                  <br>
-
-                </p>
-                <div class="row">
-                  <div class="col-md-8 pl-0">
-                    <%= f.text_field :email, class:"form-control input-sm" %>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="col-md-5">
-                <p> <span class="f21">Phone</span>
-
-                </p>
-                <div class="row">
-                  <div class="col-md-8 pl-0">
-                      <%= f.text_field :phone, class:"form-control input-sm" %>
-
-                  </div>
-                  <div class="col-md-4">
-                    <button class="btn signUp">Subscribe</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <%end %>
-
+    <!-- <section class="subscribeSection ">
+      <div class="row">
+        <div class="col-md-9 yellowSection">
+          <div class="container">
+            <h1>Subscribe and receive information about our products.</h1>
           </div>
-          <div class="col-md-3 topProducts">
-            <h2 class="topSellertitle mb-0"><span class="bolder">Top seller </span>Month</h2>
-            <h3 class="mt-0">(3 products)</h3>
-            <br>
-            <div class="row">
-              <div class="col-md-4">
-                <img class="topImage" src="/assets/images/top-img.png">
-              </div>
-              <div class="col-md-8 pr-0">
-                <p class="mb-0">
-                  Lorem ipsum dolor sit amet.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet.
-                </p>
+
+          <% @subscription = Subscription.new%>
+          <%= form_for(@subscription ) do |f| %>
+          <% if @subscription.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+
+              <ul>
+              <% @subscription.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="row">
+            <div class="col-md-5">
+              <p> <span class="f21"> Email</span>
+                <br>
+
+              </p>
+              <div class="row">
+                <div class="col-md-8 pl-0">
+                  <%= f.text_field :email, class:"form-control input-sm" %>
+
+                </div>
+
               </div>
             </div>
-            <br>
-            <div class="row">
-              <div class="col-md-4">
-                <img class="topImage" src="/assets/images/top-img.png">
-              </div>
-              <div class="col-md-8 pr-0">
-                <p class="mb-0">
-                  Lorem ipsum dolor sit amet.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet.
-                </p>
+            <div class="col-md-5">
+              <p> <span class="f21">Phone</span>
+
+              </p>
+              <div class="row">
+                <div class="col-md-8 pl-0">
+                    <%= f.text_field :phone, class:"form-control input-sm" %>
+
+                </div>
+                <div class="col-md-4">
+                  <button class="btn signUp">Subscribe</button>
+                </div>
               </div>
             </div>
-            <br>
-            <div class="row">
-              <div class="col-md-4">
-                <img class="topImage" src="/assets/images/top-img.png">
-              </div>
-              <div class="col-md-8 pr-0">
-                <p class="mb-0">
-                  Lorem ipsum dolor sit amet.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </div>
+          </div>
+          <%end %>
+
+        </div>
+        <div class="col-md-3 topProducts">
+          <h2 class="topSellertitle mb-0"><span class="bolder">Top seller </span>Month</h2>
+          <h3 class="mt-0">(3 products)</h3>
+          <br>
+          <div class="row">
+            <div class="col-md-4">
+              <img class="topImage" src="/assets/images/top-img.png">
+            </div>
+            <div class="col-md-8 pr-0">
+              <p class="mb-0">
+                Lorem ipsum dolor sit amet.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-4">
+              <img class="topImage" src="/assets/images/top-img.png">
+            </div>
+            <div class="col-md-8 pr-0">
+              <p class="mb-0">
+                Lorem ipsum dolor sit amet.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-4">
+              <img class="topImage" src="/assets/images/top-img.png">
+            </div>
+            <div class="col-md-8 pr-0">
+              <p class="mb-0">
+                Lorem ipsum dolor sit amet.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section> -->
+  
 
-    <footer class="blackFooter infoRow text-center">
+   <!--  <footer class="blackFooter infoRow text-center">
       <div class="row">
         <div class="fixed-margin-left col-md-1 col-md-offset-2 col-sm-offset-0 col-sm-12 col-xs-12 col-xs-offset-0 fixed-width">
           <h5>FAQ</h5>
@@ -238,7 +239,7 @@
         </div>
       </div>
       <p class="text-center">All right reserved, Walloom S.A.S ® Copyright, 2017 </p>
-    </footer>
+    </footer> -->
     <script type="text/javascript">
       jQuery(document).ready(function($) {
         setTimeout(function () {
@@ -248,17 +249,3 @@
     </script>
   </body>
 </html>
-
-<style>
-  #navbar li a:hover{
-    background-color:  #4c4c4c !important;
-    border-color: white !important;
-    color: white !important;
-    padding-top: 53px !important;
-    padding-bottom: 10px !important;
-    margin-top: -38px !important;
-    transition: all 0.2s ease-out 0s;
-    font-weight: 500;
-    height: 103px;
-  }
-</style>

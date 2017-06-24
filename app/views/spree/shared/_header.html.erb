@@ -1,7 +1,6 @@
 <div id="spree-header fixed-margin">
   <nav class="top_panel  hidden-sm hidden-xs">
     <div class="panel-container">
-     <!--  <p class="navbar-text navbar-left">Open hours: 8.00-18.00 Mon-Sat</p> -->
      <div class="navbar-text navbar-left social-icons">
         <div class="navbar-text navbar-left">
           <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -26,9 +25,10 @@
           <div id="search-bar" class="navbar-right search-bar-header" data-hook>
             <%= render partial: 'spree/shared/search' %>
           </div>
-          <%= link_to "Regístrese", spree.signup_path, :class => "navbar-text navbar-right registrese-button" %>
-          <p class="navbar-text navbar-right o-text"> o </p>
           <%= link_to 'Ingrese', spree.login_path, :class => "navbar-text navbar-right" %>
+          <%= link_to "Regístrese", spree.signup_path, :class => "navbar-text navbar-right registrese-button" %>
+          <!-- <p class="navbar-text navbar-right o-text"> o </p> -->
+          
         <% end %>
       </div>
     </div>
@@ -42,14 +42,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <img class="logoImage " src="/assets/images/LegacySuplements.png">
+        <img class="logoImage " src="/assets/images/full_logo_blue.png">
       </div>
       <div id="navbar" class="navbar-collapse collapse navbar-content">
         <ul class="nav navbar-nav navbar-right mainNav">
           <li><a href="/catalog">Nuestros Productos <em>></em></a></li>
-          <li><a href="/about">Nuestros Servicios <em>></em></a></li>
+          <li><a href="">Nuestros Servicios <em>></em></a></li>
           <li><a href="/empresa">La Empresa</a></li>
-          <li><a href="/security">Contáctenos</a></li>
+          <li><a href="">Contáctenos</a></li>
         </ul>
     </div>
   </nav>
@@ -78,11 +78,12 @@
 
   .registrese-button{
     margin-left: 6px;
+    visibility: hidden;
   }
 
   .search-bar-header{
     background: #306cab;
-    margin-left: 30px;
+    margin-left: 15px;
   }
 
   .search-bar-header .form-control{
@@ -100,18 +101,37 @@
     margin-top: 6px !important; 
   }
 
-/*  .asd::before {
-    content: '';
-    display: inline-block;
-    height: 18px;
-    left: 23px;
-    top: 2px;
-    position: relative;
-    width: 2px;
-    background: #185198;
-  }*/
 
   .top_panel i{
     font-size: 20px;
+  }
+
+  .home-nav li a:hover{
+    background-color: #4c4c4c !important;
+    border-color: white !important;
+    color: white !important;
+    padding-top: 32px !important;
+    padding-bottom: 10px !important;
+    /* margin-top: -38px !important; */
+    transition: all 0.2s ease-out 0s;
+    font-weight: 500;
+    height: 82px;
+    position: relative;
+    top: -17px;
+  }
+
+  @media (min-width: 768px){
+
+    .home-nav > li > a {
+      border-color: white !important;
+      padding-top: 32px !important;
+      padding-bottom: 10px !important;
+      /* margin-top: -38px !important; */
+      transition: all 0.2s ease-out 0s;
+      font-weight: 500;
+      height: 82px;
+      position: relative;
+      top: -17px;
+    }
   }
 </style>
