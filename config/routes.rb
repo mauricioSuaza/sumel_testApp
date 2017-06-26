@@ -23,11 +23,8 @@ Rails.application.routes.draw do
 
   resources :subscriptions
 
-  Spree::Core::Engine.routes.prepend do
-    post '/cotizar', to: 'orders#cotizar', as: 'cotizar'
-  end
-  
   Spree::Core::Engine.add_routes do
+    post '/cotizacion', to: 'orders#cotizare', as: 'cotizare'
     namespace :admin do
       resources :subscriptions
     end

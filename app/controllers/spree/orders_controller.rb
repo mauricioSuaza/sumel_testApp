@@ -38,8 +38,10 @@ module Spree
       associate_user
     end
 
-    def cotizar
+    def cotizare
       redirect_to root_path
+      #simple_current_order.products
+      #simple_current_order.item_count
     end
 
     # Adds a new item to the order (creating a new order if none already exists)

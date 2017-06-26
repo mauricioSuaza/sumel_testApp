@@ -61,3 +61,41 @@ jQuery(document).ready(function($) {
     $(".third").css("visibility", "hidden"); 
   });
 });
+
+(function ($) {
+  $(document).ready(function(){
+    $(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $(".top_panel").hide();
+          $('.home-nav').addClass("navbar home-nav menu navbar-fixed-top fixed-margin");
+        } else {
+          $(".top_panel").show();
+          $('.home-nav').removeClass('navbar-fixed-top');
+          $('.home-nav').addClass("navbar home-nav menu navbar-static-top fixed-margin border-line");
+        }
+      });
+    });
+
+    $(".photo1").mouseover(function(e){    
+      $(".block-text").css("visibility", "visible");
+    });
+    $(".photo1").mouseout(function(e){
+      $(".block-text").css("visibility", "hidden"); 
+    });
+
+    $(".photo2").mouseover(function(e){    
+      $(".block-text2").css("visibility", "visible");
+    });
+    $(".photo2").mouseout(function(e){
+      $(".block-text2").css("visibility", "hidden"); 
+    });
+
+    $(".photo3").mouseover(function(e){    
+      $(".block-text3").css("visibility", "visible");
+    });
+    $(".photo3").mouseout(function(e){
+      $(".block-text3").css("visibility", "hidden"); 
+    });
+  });
+}(jQuery));

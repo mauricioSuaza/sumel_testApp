@@ -5,11 +5,10 @@
 .mb-20{margin-bottom: 20px !important;}
 
 .top_panel {
-  min-height: 38px;
+  min-height: 40px;
   margin-top: 0;
   position: relative;
   z-index: 10000;
-  font-size: 0.8125em;
   font-weight: 400;
   background: #1253a7;
   color: white;
@@ -17,6 +16,7 @@
 
 .top_panel a{
   color: white;
+  font-size: 13px;
 }
 
 /*Top panel*/
@@ -296,6 +296,10 @@
   }
 
   .cotizar-button:hover{
+    background: #B20202
+  }
+
+  .cotizar-button:hover{
     background: rgba(205, 41, 40, 0.8) !important;
     color: white !important;
   }
@@ -401,6 +405,10 @@
 
   }
 
+  .block-text a, .block-text2 a{
+    color:white;
+  }
+
   .block-text, .block-text2, .block-text3 {
     visibility: hidden;  
     color: white;
@@ -414,7 +422,7 @@
 
   .block-text h3, .block-text2 h3, .block-text3 h3{
     border: 3px solid white;
-    width: 39%;
+    width: 41%;
     padding: 8px;
     font-weight: 500 !important;
     margin: 0 auto !important;
@@ -648,13 +656,13 @@
   /*CHEVERE SECTION*/
   .chevere{
     background: #dbd9da;
-    height: 200px;
+    height: 270px;
   }
 
   .chevere h1{
     color: #1252a9;
     font-weight: 900;
-    padding: 38px 32px;
+    padding: 15px 32px;
   }
 
   .exclamacion{
@@ -663,8 +671,12 @@
     top: 15px;
   }
 
-  .chevere .content{
-    padding: 38px 32px;
+  /*.chevere .content{
+    padding: 18px 32px;
+  }*/
+
+  .row .content{
+    padding-top: 20px;
   }
 
   .chevere .content h5{
@@ -702,12 +714,7 @@
   .blackFooter a{
     color: white !important;
   }
-
-  .blackFooter a{
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 100;
-  }
-
+  
   .blackFooter p{
     padding-top: 57px;
   }
