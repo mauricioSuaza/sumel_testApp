@@ -391,6 +391,8 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0)
       tilt (~> 2.0)
+    social-share-button (0.10.0)
+      coffee-rails
     spring (2.0.1)
       activesupport (>= 4.2)
     sprockets (3.7.1)
@@ -468,6 +470,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   sidekiq
   sinatra
+  social-share-button
   spree!
   spree_active_shipping!
   spree_auth_devise!
@@ -482,4 +485,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.2
+   1.15.1
