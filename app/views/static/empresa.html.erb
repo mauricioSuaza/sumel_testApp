@@ -442,7 +442,7 @@
 </style>
 
 <script>
-  jQuery(document).ready(function($) {
+  $(document).on('turbolinks:load', function() {
     $('.history').click(function(event) {
       $('.first').hide();
       $('.history-div').show();

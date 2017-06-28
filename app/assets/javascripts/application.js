@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
-jQuery(document).ready(function($) {
+$(document).on('turbolinks:load', function() {
   $(".photo1").mouseover(function(e){    
     $(".block-text").css("visibility", "visible");
   });
@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
 });
 
 (function ($) {
-  $(document).ready(function(){
+  $(document).on('turbolinks:load', function() {
     $(function () {
       $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {

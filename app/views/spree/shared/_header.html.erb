@@ -1,7 +1,7 @@
 <div id="spree-header fixed-margin">
   <nav class="top_panel  hidden-sm hidden-xs">
     <div class="panel-container">
-     <div class="navbar-text navbar-left social-icons">
+      <div class="navbar-text navbar-left social-icons">
         <div class="navbar-text navbar-left">
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </div>
@@ -11,9 +11,7 @@
         <div class="navbar-text navbar-left">
           <i class="fa fa-instagram" aria-hidden="true"></i>
         </div>
-     </div> 
-     
-
+    </div> 
       <div class="topPanelnavRight">
         <% if spree_current_user %>
           <a href="/cart" data-hook class="navbar-right add-car" id="link-to-cart"> Add to cart</a>
@@ -28,7 +26,6 @@
           <%= link_to 'Ingrese', spree.login_path, :class => "navbar-text navbar-right" %>
           <%= link_to "Regístrese", spree.signup_path, :class => "navbar-text navbar-right registrese-button" %>
           <!-- <p class="navbar-text navbar-right o-text"> o </p> -->
-          
         <% end %>
       </div>
     </div>
@@ -49,12 +46,50 @@
           <li><a href="/catalog">Nuestros Productos <em>></em></a></li>
           <li><a href="">Nuestros Servicios <em>></em></a></li>
           <li><a href="/empresa">La Empresa</a></li>
-          <li><a href="">Contáctenos</a></li>
+          <li class="contact-click"><a href="" data-toggle="modal" data-target="busqueda-modal">Contáctenos</a></li>
         </ul>
     </div>
   </nav>
-</div>
 
+  
+</div>
+<div class="modal fade" id="busqueda-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-contant" role="document" style="margin-top: 161px;">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <img class="modal-logo" src="/assets/images/full_logo_blue.png">
+              <br>
+              <br>
+              <img class="img-contact" src="/assets/images/contact-photo.png">
+              <br>
+              <br>
+              <p style="color: #5d5d5d; text-align: center;">Aseguramos la felicidad de nuestros clientes</p>
+              <br>
+            </div>
+            <div class="col-md-6" style="padding-left: 73px;">  
+              <h1 style="color: #1254A8; text-align: right;">¿Quieres conocer alguno de nuestros productos?</h1>
+              <p class="text-right" style="color: #5d5d5d; font-size: 16px;">Escríbenos</p>
+              <div class="form-container">
+                <%= form_tag("/contact-message", method: "post") do %>
+                  <%= text_field_tag "message[name]", "", placeholder: 'TU NOMBRE', class: 'input-style form-control', required: true%>
+                  <%= text_field_tag "message[email]", "", placeholder: 'EMAIL', class: 'input-style form-control', type: 'email', required: true%>
+                  <%= text_field_tag "message[product]", "", placeholder: 'PHONE', class: 'input-style form-control', type: 'number', required: true%>
+                  <%= submit_tag("COTIZAR", class: "modal-submit")%>
+                <% end %>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
 <style>
 
   .social-icons{
@@ -120,6 +155,43 @@
     top: -17px;
   }
 
+  /*modal*/
+  .modal-contant{
+    width: 800px;
+  }
+
+  .modal-logo{
+    width: 60%;
+  }
+
+  .img-contact{
+    width: 105%;
+  }
+
+  .input-style{
+    text-align: center;
+    background: #d4d4d6;    
+    border-radius: 0;
+    margin-bottom: 13px;
+  }
+
+  .input-style[placeholder]{
+    color: #707072;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .modal-submit{
+    width: 50%;
+    float: right;
+    background: #d50d00;
+    color: white;
+    border-radius: 0;
+    border-color: #d50d00;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
   @media (min-width: 768px){
 
     .home-nav > li > a {
@@ -135,3 +207,12 @@
     }
   }
 </style>
+
+<script>
+  $(document).on('turbolinks:load', function() {
+    $('.contact-click').click(function(event) {
+      $('#busqueda-modal').modal()
+    });
+  });
+  
+</script>

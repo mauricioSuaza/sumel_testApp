@@ -6,8 +6,8 @@
 <!--[if gt IE 9]><!-->
 <html lang="<%= I18n.locale %>"><!--<![endif]-->
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= stylesheet_link_tag  'spree/home/header-tablet'%>
   <head data-hook="inside_head">
     <%= render partial: 'spree/shared/head' %>
@@ -241,7 +241,7 @@
       <p class="text-center">All right reserved, Walloom S.A.S ® Copyright, 2017 </p>
     </footer> -->
     <script type="text/javascript">
-      jQuery(document).ready(function($) {
+      $(document).on('turbolinks:load', function() {
         setTimeout(function () {
           $(".flash-messages-all").fadeOut('slow')
         }, 2000);

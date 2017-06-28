@@ -22,9 +22,10 @@ Rails.application.routes.draw do
   post '/subs', to: 'subscriptions#create', as: 'newsubscription'
 
   resources :subscriptions
-
+  post 'contact-message', to: 'messages#create', as: 'contact-message'
   Spree::Core::Engine.add_routes do
     post '/cotizacion', to: 'orders#cotizare', as: 'cotizare'
+
     namespace :admin do
       resources :subscriptions
     end
